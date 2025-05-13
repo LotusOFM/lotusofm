@@ -8,6 +8,7 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -16,6 +17,7 @@
       color: #333;
       scroll-behavior: smooth;
     }
+
     header {
       position: sticky;
       top: 0;
@@ -27,22 +29,30 @@
       justify-content: space-between;
       align-items: center;
     }
+
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
+
     nav a:hover {
       color: #ff69b4;
     }
+
     .hero {
-      background: url('https://raw.githubusercontent.com/LotusOFM/lotusofm/49ffbc4e5f10da0b83021103a9cffe2222f81d49/background%20banner.png') center center/cover no-repeat;
+      background: url('https://raw.githubusercontent.com/LotusOFM/lotusofm/49ffbc4e5f10da0b83021103a9cffe2222f81d49/background%20banner.png?raw=true') center center / cover no-repeat;
       color: white;
       text-align: center;
       padding: 100px 20px;
-      min-height: 300px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeIn 2s ease-out;
     }
+
     .cta-button {
       background-color: #ff69b4;
       color: white;
@@ -54,27 +64,36 @@
       margin-top: 20px;
       transition: transform 0.3s ease;
     }
+
     .cta-button:hover {
       transform: scale(1.05);
     }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 1s forwards;
     }
+
     h2 {
       font-size: 2em;
       margin-bottom: 20px;
       text-align: center;
     }
+
     ul li {
       margin-bottom: 10px;
     }
+
     .testimonial-slider {
       display: flex;
       overflow-x: auto;
       gap: 20px;
     }
+
     .testimonial {
       min-width: 300px;
       background-color: #f8f8f8;
@@ -82,17 +101,20 @@
       border-radius: 5px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
+
     input, textarea, button {
       padding: 10px;
       font-size: 1em;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
     button {
       background-color: #ff69b4;
       color: white;
@@ -100,9 +122,11 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
+
     button:hover {
       background-color: #e0559f;
     }
+
     @media (max-width: 768px) {
       nav a {
         margin: 0 8px;
@@ -114,8 +138,21 @@
         flex-direction: column;
       }
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="logo"><strong>LOTUS OFM</strong></div>
@@ -156,12 +193,12 @@
       <div class="testimonial">
         <p>"LOTUS OFM transformed my content strategy and boosted my earnings significantly!"</p>
         <h4>- Alex</h4>
-        <img src="https://raw.githubusercontent.com/LotusOFM/lotusofm/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165559.png" alt="Testimonial Image 1" style="width:100%; border-radius: 5px;">
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165559.png?raw=true" alt="Testimonial Image 1" style="width:100%; border-radius: 5px;">
       </div>
       <div class="testimonial">
         <p>"From $1k to $15k/month in just 60 days. Unreal support team."</p>
         <h4>- Mia</h4>
-        <img src="https://raw.githubusercontent.com/LotusOFM/lotusofm/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165522.png" alt="Testimonial Image 2" style="width:100%; border-radius: 5px;">
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165522.png?raw=true" alt="Testimonial Image 2" style="width:100%; border-radius: 5px;">
       </div>
     </div>
   </section>
