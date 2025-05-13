@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LOTUS OFM</title>
   <style>
     * {
@@ -27,6 +27,9 @@
       justify-content: space-between;
       align-items: center;
     }
+    .logo {
+      font-weight: bold;
+    }
     nav a {
       margin: 0 15px;
       text-decoration: none;
@@ -37,7 +40,10 @@
       color: #ff69b4;
     }
     .hero {
-      background: url('background-banner.png') center/cover no-repeat; /* Fixed path for background */
+      background-image: url('background-banner.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
       text-align: center;
       padding: 100px 20px;
@@ -83,7 +89,18 @@
       background-color: #f8f8f8;
       padding: 20px;
       border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .results-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .results-images img {
+      max-width: 45%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     form {
       display: flex;
@@ -113,8 +130,11 @@
       .hero {
         padding: 60px 10px;
       }
-      .testimonial-slider {
+      .testimonial-slider, .results-images {
         flex-direction: column;
+      }
+      .results-images img {
+        max-width: 100%;
       }
     }
     @keyframes fadeIn {
@@ -131,11 +151,12 @@
 </head>
 <body>
   <header>
-    <div class="logo"><strong>LOTUS OFM</strong></div>
+    <div class="logo">LOTUS OFM</div>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="#results">Results</a>
       <a href="#apply">Apply</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -169,40 +190,14 @@
       <div class="testimonial">
         <p>"LOTUS OFM transformed my content strategy and boosted my earnings significantly!"</p>
         <h4>- Alex</h4>
-        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165559.png?raw=true" alt="Testimonial Image 1" style="width:100%; border-radius: 5px;">
       </div>
       <div class="testimonial">
         <p>"From $1k to $15k/month in just 60 days. Unreal support team."</p>
         <h4>- Mia</h4>
-        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165522.png?raw=true" alt="Testimonial Image 2" style="width:100%; border-radius: 5px;">
       </div>
     </div>
   </section>
 
-  <section id="apply">
-    <h2>Apply to Join LOTUS OFM</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="_replyto" required>
-
-      <label for="platform">Content Platform:</label>
-      <input type="text" id="platform" name="platform">
-
-      <label for="message">Tell us about yourself:</label>
-      <textarea id="message" name="message"></textarea>
-
-      <button type="submit">Submit Application</button>
-    </form>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: lotusofm@gmail.com</p>
-    <p>Instagram: @jay._.mauri</p>
-    <p>Phone: +95 1 234 5678</p>
-  </section>
-</body>
-</html>
+  <section id="results">
+    <h2>Results From Last Year</h2>
+    <div class="
