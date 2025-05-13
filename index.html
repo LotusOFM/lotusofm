@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOTUS OFM</title>
   <style>
     * {
@@ -37,23 +37,11 @@
       color: #ff69b4;
     }
     .hero {
-      background: url('background-banner.png') center/cover no-repeat;
+      background: url('background-banner.png') center/cover no-repeat; /* Fixed path for background */
       color: white;
       text-align: center;
-      padding: 120px 20px;
-      position: relative;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-    .hero h1, .hero p, .cta-button {
-      position: relative;
-      z-index: 2;
+      padding: 100px 20px;
+      animation: fadeIn 2s ease-out;
     }
     .cta-button {
       background-color: #ff69b4;
@@ -73,6 +61,9 @@
       padding: 60px 20px;
       max-width: 1000px;
       margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 1s forwards;
     }
     h2 {
       font-size: 2em;
@@ -115,35 +106,35 @@
     button:hover {
       background-color: #e0559f;
     }
-    .results img {
-      width: 100%;
-      max-width: 480px;
-      margin: 10px auto;
-      display: block;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
     @media (max-width: 768px) {
       nav a {
         margin: 0 8px;
       }
       .hero {
-        padding: 80px 10px;
+        padding: 60px 10px;
       }
       .testimonial-slider {
         flex-direction: column;
       }
     }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo"><strong>LOTUS OFM</strong></div>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#results">Results</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#apply">Apply</a>
       <a href="#contact">Contact</a>
@@ -172,22 +163,18 @@
     </ul>
   </section>
 
-  <section id="results" class="results">
-    <h2>Results From Last Year</h2>
-    <img src="Screenshot 2025-04-21 165559.png" alt="Result 1">
-    <img src="Screenshot 2025-04-21 165522.png" alt="Result 2">
-  </section>
-
   <section id="testimonials">
     <h2>Success Stories</h2>
     <div class="testimonial-slider">
       <div class="testimonial">
         <p>"LOTUS OFM transformed my content strategy and boosted my earnings significantly!"</p>
         <h4>- Alex</h4>
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165559.png?raw=true" alt="Testimonial Image 1" style="width:100%; border-radius: 5px;">
       </div>
       <div class="testimonial">
         <p>"From $1k to $15k/month in just 60 days. Unreal support team."</p>
         <h4>- Mia</h4>
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165522.png?raw=true" alt="Testimonial Image 2" style="width:100%; border-radius: 5px;">
       </div>
     </div>
   </section>
@@ -215,7 +202,7 @@
     <h2>Contact Us</h2>
     <p>Email: lotusofm@gmail.com</p>
     <p>Instagram: @jay._.mauri</p>
+    <p>Phone: +95 1 234 5678</p>
   </section>
-
 </body>
 </html>
