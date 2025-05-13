@@ -37,9 +37,9 @@
       color: #ff69b4;
     }
 
-    /* Hero Section with Working Background Image */
+    /* Hero Section with Fixed Background Image */
     .hero {
-      background: url('https://i.postimg.cc/nLcY3Q17/background-banner.png') center/cover no-repeat;
+      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 100px 20px;
@@ -65,6 +65,7 @@
       transform: scale(1.05);
     }
 
+    /* Sections */
     section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -83,6 +84,7 @@
       text-align: center;
     }
 
+    /* Testimonials */
     .testimonial-slider {
       display: flex;
       overflow-x: auto;
@@ -96,6 +98,7 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
+    /* Form */
     form {
       display: flex;
       flex-direction: column;
@@ -107,7 +110,6 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-
     button {
       background-color: #ff69b4;
       color: white;
@@ -117,11 +119,6 @@
     }
     button:hover {
       background-color: #e0559f;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
     }
 
     @keyframes slideIn {
@@ -144,17 +141,20 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Empower Your Content Creation Journey</h1>
     <p>Join LOTUS OFM and elevate your brand to new heights.</p>
     <a href="#apply" class="cta-button">Apply Now</a>
   </section>
 
+  <!-- About Section -->
   <section id="about">
     <h2>About LOTUS OFM</h2>
     <p>LOTUS OFM is dedicated to supporting content creators in achieving their goals through comprehensive management and marketing strategies.</p>
   </section>
 
+  <!-- Testimonials -->
   <section id="testimonials">
     <h2>Success Stories</h2>
     <div class="testimonial-slider">
@@ -171,6 +171,7 @@
     </div>
   </section>
 
+  <!-- Apply Section -->
   <section id="apply">
     <h2>Apply to Join LOTUS OFM</h2>
     <form action="https://formspree.io/f/your-form-id" method="POST">
@@ -190,6 +191,7 @@
     </form>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: lotusofm@gmail.com</p>
