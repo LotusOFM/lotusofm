@@ -37,11 +37,13 @@
       color: #ff69b4;
     }
     .hero {
-      background: url('background%20banner.png') center/cover no-repeat; /* Background image with space encoded as %20 */
+      background: url('background%20banner.png') center/cover no-repeat; /* Fixed background image path */
       color: white;
       text-align: center;
       padding: 100px 20px;
-      animation: fadeIn 2s ease-out;
+      /* Temporarily removed animation to check if it's causing the issue */
+      /* animation: fadeIn 2s ease-out; */
+      transition: background-image 1s ease-in-out; /* Smooth transition for background */
     }
     .cta-button {
       background-color: #ff69b4;
@@ -127,6 +129,29 @@
         transform: translateY(0);
       }
     }
+
+    /* Results Section Styles */
+    .results-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    .result-card {
+      width: 48%;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      background-color: #f8f8f8;
+      border-radius: 5px;
+    }
+
+    .result-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
   </style>
 </head>
 <body>
