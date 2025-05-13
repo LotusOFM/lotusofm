@@ -36,17 +36,18 @@
     nav a:hover {
       color: #ff69b4;
     }
+
+    /* Fix for Hero Section and Background Image */
     .hero {
-      background: url('background-banner.png') center center / cover no-repeat; /* Background image */
+      background: url('https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/background-banner.png?raw=true') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 100px 20px;
-      min-height: 400px; /* Ensures image height */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      animation: fadeIn 2s ease-out;
+      position: relative;
+      z-index: 1;
     }
+
+    /* Apply Now Button */
     .cta-button {
       background-color: #ff69b4;
       color: white;
@@ -57,10 +58,14 @@
       display: inline-block;
       margin-top: 20px;
       transition: transform 0.3s ease;
+      position: relative; /* Ensures button stays on top of background */
+      z-index: 10;
     }
     .cta-button:hover {
       transform: scale(1.05);
     }
+
+    /* Rest of the layout and sections */
     section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -69,14 +74,14 @@
       transform: translateY(20px);
       animation: slideIn 1s forwards;
     }
+
     h2 {
       font-size: 2em;
       margin-bottom: 20px;
       text-align: center;
     }
-    ul li {
-      margin-bottom: 10px;
-    }
+
+    /* Testimonial Section */
     .testimonial-slider {
       display: flex;
       overflow-x: auto;
@@ -89,6 +94,8 @@
       border-radius: 5px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+
+    /* Form Section */
     form {
       display: flex;
       flex-direction: column;
@@ -100,6 +107,8 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
+    /* Button styling */
     button {
       background-color: #ff69b4;
       color: white;
@@ -110,21 +119,12 @@
     button:hover {
       background-color: #e0559f;
     }
-    @media (max-width: 768px) {
-      nav a {
-        margin: 0 8px;
-      }
-      .hero {
-        padding: 60px 10px;
-      }
-      .testimonial-slider {
-        flex-direction: column;
-      }
-    }
+
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
     }
+
     @keyframes slideIn {
       to {
         opacity: 1;
@@ -145,28 +145,20 @@
     </nav>
   </header>
 
+  <!-- Hero Section with Background Image -->
   <section class="hero">
     <h1>Empower Your Content Creation Journey</h1>
     <p>Join LOTUS OFM and elevate your brand to new heights.</p>
     <a href="#apply" class="cta-button">Apply Now</a>
   </section>
 
+  <!-- About Section -->
   <section id="about">
     <h2>About LOTUS OFM</h2>
     <p>LOTUS OFM is dedicated to supporting content creators in achieving their goals through comprehensive management and marketing strategies.</p>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Content Strategy & Branding</li>
-      <li>Marketing & Audience Growth</li>
-      <li>24/7 Chat Management</li>
-      <li>Revenue Optimization</li>
-      <li>Compliance & Legal Support</li>
-    </ul>
-  </section>
-
+  <!-- Testimonials Section -->
   <section id="testimonials">
     <h2>Success Stories</h2>
     <div class="testimonial-slider">
@@ -183,6 +175,7 @@
     </div>
   </section>
 
+  <!-- Apply Section -->
   <section id="apply">
     <h2>Apply to Join LOTUS OFM</h2>
     <form action="https://formspree.io/f/your-form-id" method="POST">
@@ -202,11 +195,12 @@
     </form>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: lotusofm@gmail.com</p>
     <p>Instagram: @jay._.mauri</p>
-   
+    <p>Phone: +95 1 234 5678</p>
   </section>
 </body>
 </html>
