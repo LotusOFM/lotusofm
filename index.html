@@ -37,13 +37,11 @@
       color: #ff69b4;
     }
     .hero {
-      background: url('background%20banner.png') center/cover no-repeat; /* Fixed background image path */
+      background: url('background-banner.png') center/cover no-repeat; /* Fixed path for background */
       color: white;
       text-align: center;
       padding: 100px 20px;
-      /* Temporarily removed animation to check if it's causing the issue */
-      /* animation: fadeIn 2s ease-out; */
-      transition: background-image 1s ease-in-out; /* Smooth transition for background */
+      animation: fadeIn 2s ease-out;
     }
     .cta-button {
       background-color: #ff69b4;
@@ -129,29 +127,6 @@
         transform: translateY(0);
       }
     }
-
-    /* Results Section Styles */
-    .results-section {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 50px;
-    }
-
-    .result-card {
-      width: 48%;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      padding: 20px;
-      background-color: #f8f8f8;
-      border-radius: 5px;
-    }
-
-    .result-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-
   </style>
 </head>
 <body>
@@ -194,26 +169,12 @@
       <div class="testimonial">
         <p>"LOTUS OFM transformed my content strategy and boosted my earnings significantly!"</p>
         <h4>- Alex</h4>
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165559.png?raw=true" alt="Testimonial Image 1" style="width:100%; border-radius: 5px;">
       </div>
       <div class="testimonial">
         <p>"From $1k to $15k/month in just 60 days. Unreal support team."</p>
         <h4>- Mia</h4>
-      </div>
-    </div>
-  </section>
-
-  <section id="results">
-    <h2>Results from Last Year</h2>
-    <div class="results-section">
-      <div class="result-card">
-        <img src="Screenshot%202025-04-21%20165559.png" alt="Result 1">
-        <h3>Alex's Revenue Growth</h3>
-        <p>Alex grew from $2k to $15k/month in under 3 months with our strategic marketing approach.</p>
-      </div>
-      <div class="result-card">
-        <img src="Screenshot%202025-04-21%20165522.png" alt="Result 2">
-        <h3>Mia's Brand Expansion</h3>
-        <p>Mia increased her social media reach and earnings by 200% thanks to LOTUS OFM's optimization strategies.</p>
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165522.png?raw=true" alt="Testimonial Image 2" style="width:100%; border-radius: 5px;">
       </div>
     </div>
   </section>
@@ -241,6 +202,7 @@
     <h2>Contact Us</h2>
     <p>Email: lotusofm@gmail.com</p>
     <p>Instagram: @jay._.mauri</p>
+    <p>Phone: +95 1 234 5678</p>
   </section>
 </body>
 </html>
