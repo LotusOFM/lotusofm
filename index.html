@@ -1,209 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LOTUS OFM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #333;
-      scroll-behavior: smooth;
-      line-height: 1.6;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      background-color: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      padding: 15px 20px;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #ff69b4;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOTUS OFM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    .hero {
-      position: relative;
-      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 150px 20px;
-      z-index: 1;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 0;
-    }
-    .hero h1, .hero .cta-button {
-      position: relative;
-      z-index: 1;
-    }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fff;
+        color: #333;
+        scroll-behavior: smooth;
+        line-height: 1.6;
+      }
 
-    .cta-button {
-      background-color: #ff69b4;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 20px;
-      transition: transform 0.3s ease;
-    }
-    .cta-button:hover {
-      transform: scale(1.05);
-    }
+      header {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 40px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-    section {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
 
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      text-align: center;
-      font-weight: 700;
-    }
+      nav a:hover {
+        color: #ff69b4;
+      }
 
-    .testimonial-slider {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 10px 0;
-    }
-    .testimonial {
-      min-width: 300px;
-      background-color: #f8f8f8;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .testimonial img {
-      width: 100%;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
+      .hero {
+        position: relative;
+        background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 140px 20px;
+      }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, textarea, button {
-      padding: 12px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      background-color: #ff69b4;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-weight: 600;
-    }
-    button:hover {
-      background-color: #e0559f;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo"><strong>LOTUS OFM</strong></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#beliefs">Beliefs</a>
-      <a href="#services">Services</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#apply">Apply</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
 
-  <section class="hero">
-    <h1>OnlyFans Marketing and Management at the Highest Level</h1>
-    <a href="#apply" class="cta-button">Apply Now</a>
-  </section>
+      .hero h1,
+      .hero .cta-button {
+        position: relative;
+        z-index: 1;
+      }
 
-  <section id="about">
-    <h2>About LOTUS OFM</h2>
-    <p>LOTUS OFM is dedicated to supporting content creators in achieving their goals through comprehensive management and marketing strategies.</p>
-  </section>
+      .cta-button {
+        background-color: #ff69b4;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 25px;
+        transition: transform 0.3s ease;
+      }
 
-  <section id="beliefs" style="background: linear-gradient(135deg, #ffe4ec, #fff); border-radius: 12px;">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <h2 style="font-size: 2.2em; color: #ff69b4;">What We Believe In</h2>
-      <p style="font-size: 1.2em; line-height: 1.6; color: #444;">
-        Through years of experience as an OnlyFans Agency, we know exactly how we can fully fulfill your potential and conquer the world of men for you.
-      </p>
-    </div>
-  </section>
+      .cta-button:hover {
+        transform: scale(1.05);
+      }
 
-  <section id="testimonials">
-    <h2>Success Stories</h2>
-    <div class="testimonial-slider">
-      <div class="testimonial">
-        <p>"LOTUS OFM transformed my content strategy and boosted my earnings significantly!"</p>
-        <h4>- Rayx</h4>
-        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165559.png?raw=true" alt="Testimonial Image 1">
-      </div>
-      <div class="testimonial">
-        <p>"From $2k to $15k/month in just 60 days. Unreal support team."</p>
-        <h4>- Mia</h4>
-        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165522.png?raw=true" alt="Testimonial Image 2">
-      </div>
-    </div>
-  </section>
+      section {
+        padding: 80px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-  <section id="apply">
-    <h2>Apply to Join LOTUS OFM</h2>
-    <form action="https://formspree.io/f/mnndokgq" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #ff69b4;
+      }
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="_replyto" required>
+      p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
 
-      <label for="platform">Content Platform:</label>
-      <input type="text" id="platform" name="platform">
+      .testimonial-slider {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+      }
 
-      <label for="message">Tell us about yourself:</label>
-      <textarea id="message" name="message"></textarea>
+      .testimonial {
+        min-width: 300px;
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-      <button type="submit">Submit Application</button>
-    </form>
-  </section>
+      .testimonial img {
+        width: 100%;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: lotusofm@gmail.com</p>
-    <p>Instagram: @jay._.mauri</p>
-  </section>
-</body>
-</html>
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      textarea,
+      button {
+        padding: 12px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e0559f;
+      }
+
+      #beliefs {
+        background: linear
