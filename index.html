@@ -40,19 +40,20 @@
     }
 
     nav a:hover {
-      color: #ff69b4;
+      color: #00ffff;
     }
 
     .hero {
       position: relative;
-      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center center/cover no-repeat;
+      width: 100vw;
       height: 100vh;
-      color: white;
-      text-align: center;
+      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 20px;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
     }
 
     .hero::before {
@@ -64,26 +65,27 @@
     }
 
     .hero h1,
-    .hero .cta-button {
+    .cta-button {
       position: relative;
       z-index: 2;
     }
 
     .cta-button {
-      background-color: #ff69b4;
-      color: white;
-      padding: 15px 30px;
+      background: linear-gradient(135deg, #222, #444);
+      color: #fff;
+      padding: 14px 28px;
+      border: 1px solid #555;
+      border-radius: 6px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: 600;
-      display: inline-block;
       margin-top: 20px;
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .cta-button:hover {
+      background: linear-gradient(135deg, #333, #666);
       transform: scale(1.05);
-      background-color: #ff85c1;
+      border-color: #777;
     }
 
     section {
@@ -146,15 +148,15 @@
     }
 
     button {
-      background-color: #ff69b4;
+      background-color: #333;
       color: white;
-      border: none;
+      border: 1px solid #555;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #e0559f;
+      background-color: #555;
     }
 
     #beliefs {
