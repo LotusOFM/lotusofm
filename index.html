@@ -2,202 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LOTUS OFM</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #111;
-      color: #fff;
-      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
       scroll-behavior: smooth;
+      line-height: 1.6;
     }
-
     header {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      padding: 1.5rem 3rem;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 20px;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 1000;
     }
-
-    header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
     nav a {
-      margin-left: 2rem;
+      margin: 0 15px;
       text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.3s ease;
+      color: #333;
+      font-weight: 600;
     }
-
     nav a:hover {
-      color: #ff4da6;
+      color: #ff69b4;
     }
 
     .hero {
-      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') no-repeat center center/cover;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      max-width: 800px;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    .cta-btn {
-      background-color: #ff4da6;
-      padding: 1rem 2.5rem;
-      border: none;
-      border-radius: 999px;
+      position: relative;
+      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center/cover no-repeat;
       color: white;
-      font-size: 1.1rem;
-      cursor: pointer;
+      text-align: center;
+      padding: 150px 20px;
+      z-index: 1;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    .hero h1, .hero .cta-button {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 20px;
       transition: transform 0.3s ease;
     }
-
-    .cta-btn:hover {
+    .cta-button:hover {
       transform: scale(1.05);
     }
 
     section {
-      padding: 6rem 2rem;
-      max-width: 1200px;
+      padding: 80px 20px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
       text-align: center;
-    }
-
-    .section-text {
-      text-align: center;
-      font-size: 1.1rem;
-      max-width: 850px;
-      margin: 0 auto 3rem auto;
+      font-weight: 700;
     }
 
     .testimonial-slider {
       display: flex;
       overflow-x: auto;
-      gap: 2rem;
-      padding: 1rem;
+      gap: 20px;
+      padding: 10px 0;
     }
-
     .testimonial {
       min-width: 300px;
-      background-color: #222;
-      padding: 1.5rem;
+      background-color: #f8f8f8;
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-
     .testimonial img {
       width: 100%;
-      border-radius: 10px;
-      margin-top: 1rem;
+      border-radius: 5px;
+      margin-top: 10px;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin-top: 2rem;
+      gap: 15px;
     }
-
     input, textarea, button {
-      padding: 1rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
+      padding: 12px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
-
-    input, textarea {
-      background-color: #222;
-      color: white;
-    }
-
     button {
-      background-color: #ff4da6;
+      background-color: #ff69b4;
       color: white;
+      border: none;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      font-weight: 600;
     }
-
     button:hover {
-      background-color: #e04197;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      background-color: #000;
-      font-size: 0.9rem;
-      color: #aaa;
+      background-color: #e0559f;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>LOTUS OFM</h1>
+    <div class="logo"><strong>LOTUS OFM</strong></div>
     <nav>
       <a href="#about">About</a>
       <a href="#beliefs">Beliefs</a>
-      <a href="#success">Success</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#apply">Apply</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div>
-      <h2>OnlyFans Marketing and Management at the Highest Level</h2>
-      <a href="#apply"><button class="cta-btn">Apply Now</button></a>
-    </div>
+    <h1>OnlyFans Marketing and Management at the Highest Level</h1>
+    <a href="#apply" class="cta-button">Apply Now</a>
   </section>
 
   <section id="about">
-    <h2 class="section-title">About LOTUS OFM</h2>
-    <p class="section-text">
-      LOTUS OFM is dedicated to supporting content creators in achieving their goals through comprehensive management and marketing strategies.
-    </p>
+    <h2>About LOTUS OFM</h2>
+    <p>LOTUS OFM is dedicated to supporting content creators in achieving their goals through comprehensive management and marketing strategies.</p>
   </section>
 
-  <section id="beliefs">
-    <h2 class="section-title">What We Believe In</h2>
-    <p class="section-text">
-      Through years of experience as an OnlyFans Agency, we know exactly how we can fully fulfill your potential and conquer the world of men for you.
-    </p>
+  <section id="beliefs" style="background: linear-gradient(135deg, #ffe4ec, #fff); border-radius: 12px;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 2.2em; color: #ff69b4;">What We Believe In</h2>
+      <p style="font-size: 1.2em; line-height: 1.6; color: #444;">
+        Through years of experience as an OnlyFans Agency, we know exactly how we can fully fulfill your potential and conquer the world of men for you.
+      </p>
+    </div>
   </section>
 
-  <section id="success">
-    <h2 class="section-title">Success Stories</h2>
+  <section id="testimonials">
+    <h2>Success Stories</h2>
     <div class="testimonial-slider">
       <div class="testimonial">
         <p>"LOTUS OFM transformed my content strategy and boosted my earnings significantly!"</p>
@@ -213,27 +182,28 @@
   </section>
 
   <section id="apply">
-    <h2 class="section-title">Apply to Join LOTUS OFM</h2>
+    <h2>Apply to Join LOTUS OFM</h2>
     <form action="https://formspree.io/f/mnndokgq" method="POST">
-      <input type="text" id="name" name="name" placeholder="Name" required>
-      <input type="email" id="email" name="_replyto" placeholder="Email" required>
-      <input type="text" id="platform" name="platform" placeholder="Content Platform">
-      <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="platform">Content Platform:</label>
+      <input type="text" id="platform" name="platform">
+
+      <label for="message">Tell us about yourself:</label>
+      <textarea id="message" name="message"></textarea>
+
       <button type="submit">Submit Application</button>
     </form>
   </section>
 
   <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <p class="section-text">
-      Email: <a href="mailto:lotusofm@gmail.com">lotusofm@gmail.com</a><br>
-      Instagram: <a href="https://instagram.com/jay._.mauri" target="_blank">@jay._.mauri</a>
-    </p>
+    <h2>Contact Us</h2>
+    <p>Email: lotusofm@gmail.com</p>
+    <p>Instagram: @jay._.mauri</p>
   </section>
-
-  <footer>
-    &copy; 2025 LOTUS OFM. All Rights Reserved.
-  </footer>
-
 </body>
 </html>
