@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lotus OFM - OnlyFans Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOTUS OFM</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,15 +16,15 @@
       font-family: 'Poppins', sans-serif;
       background-color: #111;
       color: #fff;
-      overflow-x: hidden;
       line-height: 1.7;
+      scroll-behavior: smooth;
     }
 
     header {
       position: fixed;
-      width: 100%;
       top: 0;
       left: 0;
+      width: 100%;
       padding: 1.5rem 3rem;
       display: flex;
       justify-content: space-between;
@@ -36,7 +36,6 @@
     header h1 {
       font-size: 1.5rem;
       font-weight: 700;
-      letter-spacing: 1px;
     }
 
     nav a {
@@ -52,13 +51,13 @@
     }
 
     .hero {
-      height: 100vh;
-      background: url("https://via.placeholder.com/1600x900") no-repeat center center/cover;
+      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') no-repeat center center/cover;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4rem 2rem;
       text-align: center;
+      padding: 6rem 2rem;
     }
 
     .hero h2 {
@@ -100,19 +99,58 @@
       text-align: center;
       font-size: 1.1rem;
       max-width: 850px;
-      margin: 0 auto;
-      margin-bottom: 3rem;
+      margin: 0 auto 3rem auto;
     }
 
-    .image-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
       gap: 2rem;
+      padding: 1rem;
     }
 
-    .image-gallery img {
+    .testimonial {
+      min-width: 300px;
+      background-color: #222;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .testimonial img {
       width: 100%;
-      border-radius: 16px;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    input, textarea, button {
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+    }
+
+    input, textarea {
+      background-color: #222;
+      color: white;
+    }
+
+    button {
+      background-color: #ff4da6;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e04197;
     }
 
     footer {
@@ -121,14 +159,6 @@
       background-color: #000;
       font-size: 0.9rem;
       color: #aaa;
-    }
-
-    a {
-      color: #ff4da6;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -147,52 +177,57 @@
 
   <section class="hero">
     <div>
-      <h2>Elite OnlyFans Management for High-Earning Creators</h2>
+      <h2>OnlyFans Marketing and Management at the Highest Level</h2>
       <a href="#apply"><button class="cta-btn">Apply Now</button></a>
     </div>
   </section>
 
   <section id="about">
-    <h2 class="section-title">Who We Are</h2>
+    <h2 class="section-title">About LOTUS OFM</h2>
     <p class="section-text">
-      LOTUS OFM is a full-service management agency dedicated to helping creators scale their OnlyFans to new heights. From marketing to 24/7 messaging—we handle it all so you can focus on content.
+      LOTUS OFM is dedicated to supporting content creators in achieving their goals through comprehensive management and marketing strategies.
     </p>
   </section>
 
   <section id="beliefs">
-    <h2 class="section-title">Our Beliefs</h2>
+    <h2 class="section-title">What We Believe In</h2>
     <p class="section-text">
-      We believe in transparency, creative freedom, and long-term success. Whether you're starting from scratch or already earning, our systems are designed to multiply your results.
+      Through years of experience as an OnlyFans Agency, we know exactly how we can fully fulfill your potential and conquer the world of men for you.
     </p>
   </section>
 
   <section id="success">
-    <h2 class="section-title">Client Success</h2>
-    <p class="section-text">
-      Our clients often go from earning $1k/month to $10k–$20k/month with our systems. Real growth, real results.
-    </p>
-    <div class="image-gallery">
-      <img src="https://via.placeholder.com/400x600" alt="Model 1">
-      <img src="https://via.placeholder.com/400x600" alt="Model 2">
-      <img src="https://via.placeholder.com/400x600" alt="Model 3">
-      <img src="https://via.placeholder.com/400x600" alt="Model 4">
+    <h2 class="section-title">Success Stories</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <p>"LOTUS OFM transformed my content strategy and boosted my earnings significantly!"</p>
+        <h4>- Rayx</h4>
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165559.png?raw=true" alt="Testimonial Image 1">
+      </div>
+      <div class="testimonial">
+        <p>"From $2k to $15k/month in just 60 days. Unreal support team."</p>
+        <h4>- Mia</h4>
+        <img src="https://github.com/LotusOFM/lotusofm/blob/49ffbc4e5f10da0b83021103a9cffe2222f81d49/Screenshot%202025-04-21%20165522.png?raw=true" alt="Testimonial Image 2">
+      </div>
     </div>
   </section>
 
   <section id="apply">
-    <h2 class="section-title">Apply to Work With Us</h2>
-    <p class="section-text">
-      We’re selective about who we work with. If you have strong potential or an existing fanbase, apply now and we'll schedule a call to see if it’s the right fit.
-    </p>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="https://yourformlink.com" target="_blank"><button class="cta-btn">Apply Now</button></a>
-    </div>
+    <h2 class="section-title">Apply to Join LOTUS OFM</h2>
+    <form action="https://formspree.io/f/mnndokgq" method="POST">
+      <input type="text" id="name" name="name" placeholder="Name" required>
+      <input type="email" id="email" name="_replyto" placeholder="Email" required>
+      <input type="text" id="platform" name="platform" placeholder="Content Platform">
+      <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
   </section>
 
   <section id="contact">
     <h2 class="section-title">Contact Us</h2>
     <p class="section-text">
-      Have questions? Reach out to us at <a href="mailto:contact@lotusofm.com">contact@lotusofm.com</a> or DM on Instagram <a href="https://instagram.com/jay._.mauri">@jay._.mauri</a>
+      Email: <a href="mailto:lotusofm@gmail.com">lotusofm@gmail.com</a><br>
+      Instagram: <a href="https://instagram.com/jay._.mauri" target="_blank">@jay._.mauri</a>
     </p>
   </section>
 
