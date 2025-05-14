@@ -3,116 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LOTUS OFM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>LOTUS OFM | Elite OnlyFans Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0f0f0f;
-      color: #fff;
+      background: #0c0c0c;
+      color: white;
+      scroll-behavior: smooth;
     }
-
     header {
+      background: #0c0c0c;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 2rem;
-      background-color: #0f0f0f;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
-
     .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
       font-family: 'Playfair Display', serif;
-      color: #fff;
+      font-size: 1.5rem;
     }
-
-    nav a {
-      color: #ccc;
-      margin-left: 2rem;
+    .nav a {
+      color: white;
+      margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
-
-    .cta-button {
-      background-color: #b30000;
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #cc0000;
-    }
-
     .hero {
-      position: relative;
-      background: url('https://images.unsplash.com/photo-1607301721881-494a7f5d6da9?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       height: 100vh;
+      background: url('https://images.unsplash.com/photo-1582232670844-1bb769d06602') no-repeat center center/cover;
       display: flex;
+      justify-content: center;
       align-items: center;
-      padding: 0 3rem;
+      text-align: center;
+      padding: 0 20px;
     }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
-    }
-
-    .hero-content h1 {
+    .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #f5f5dc;
+      color: #fff;
     }
-
-    .hero-content p {
+    .hero p {
       font-size: 1.2rem;
-      color: #ddd;
-      margin-bottom: 2rem;
+      margin-top: 10px;
+    }
+    .btn {
+      margin-top: 20px;
+      background: #ff007a;
+      padding: 12px 24px;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      gap: 40px;
+    }
+    .beliefs, .success, .apply {
+      background: #1c1c1c;
+      padding: 40px;
+      border-radius: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">LOTUS OFM</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#models">Models</a>
+    <nav class="nav">
+      <a href="#beliefs">Beliefs</a>
+      <a href="#success">Success</a>
       <a href="#apply">Apply</a>
-      <button class="cta-button">Join Us</button>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>YOUR SUCCESS IS OUR MISSION</h1>
-      <p>We help elite creators build powerful, high-income brands on OnlyFans. Start today.</p>
-      <button class="cta-button">Apply Now</button>
+    <div>
+      <h1>Elite OnlyFans Management for High-Earning Creators</h1>
+      <p>We turn your potential into consistent five-figure months.</p>
+      <button class="btn" onclick="document.getElementById('apply').scrollIntoView({ behavior: 'smooth' })">Apply Now</button>
     </div>
   </section>
+
+  <section id="beliefs" class="beliefs">
+    <h2 class="section-title">Our Beliefs</h2>
+    <p>At LOTUS OFM, we believe in transparency, creativity, and growth. We partner with creators to unlock their full earning potential without ever compromising their voice, image, or boundaries. Our 24/7 team is dedicated to ensuring every fan interaction and marketing decision is tailored for maximum success.</p>
+  </section>
+
+  <section id="success" class="success">
+    <h2 class="section-title">Success Stories</h2>
+    <div class="grid">
+      <p>🚀 Model A went from $1.2k/month to $18k/month in 90 days.</p>
+      <p>🔥 Model B scaled from $800/month to $11k/month with chat rev alone.</p>
+      <p>🌸 Over 10+ creators are now making $15k–$30k/month.</p>
+    </div>
+  </section>
+
+  <section id="apply" class="apply">
+    <h2 class="section-title">Apply to Join</h2>
+    <p>We’re looking for models with strong content, a social media presence (200k+ IG followers preferred), and the ambition to scale. No experience? No problem—we grow talent from $0 to 5-figures/month with zero upfront cost.</p>
+    <br />
+    <a href="#" class="btn">Apply Now</a>
+  </section>
+
+  <footer>
+    &copy; 2025 LOTUS OFM. All rights reserved.
+  </footer>
 </body>
 </html>
