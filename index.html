@@ -2,137 +2,203 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LOTUS OFM | Elite OnlyFans Management</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lotus OFM - OnlyFans Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: #0c0c0c;
-      color: white;
-      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      overflow-x: hidden;
+      line-height: 1.7;
     }
+
     header {
-      background: #0c0c0c;
-      padding: 20px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 1.5rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
       z-index: 1000;
     }
-    .logo {
-      font-family: 'Playfair Display', serif;
+
+    header h1 {
       font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
-    .nav a {
-      color: white;
-      margin-left: 20px;
+
+    nav a {
+      margin-left: 2rem;
       text-decoration: none;
+      color: #fff;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #ff4da6;
+    }
+
     .hero {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1582232670844-1bb769d06602') no-repeat center center/cover;
+      background: url("https://via.placeholder.com/1600x900") no-repeat center center/cover;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 0 20px;
     }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
+
+    .hero h2 {
       font-size: 3rem;
+      max-width: 800px;
       color: #fff;
+      margin-bottom: 2rem;
     }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    .btn {
-      margin-top: 20px;
-      background: #ff007a;
-      padding: 12px 24px;
-      color: white;
+
+    .cta-btn {
+      background-color: #ff4da6;
+      padding: 1rem 2.5rem;
       border: none;
-      font-size: 1rem;
+      border-radius: 999px;
+      color: white;
+      font-size: 1.1rem;
       cursor: pointer;
-      border-radius: 5px;
+      transition: transform 0.3s ease;
     }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+    }
+
     section {
-      padding: 80px 20px;
-      max-width: 1000px;
+      padding: 6rem 2rem;
+      max-width: 1200px;
       margin: 0 auto;
     }
+
     .section-title {
-      font-size: 2rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      text-align: center;
     }
-    .grid {
+
+    .section-text {
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 850px;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+
+    .image-gallery {
       display: grid;
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
     }
-    .beliefs, .success, .apply {
-      background: #1c1c1c;
-      padding: 40px;
-      border-radius: 12px;
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 16px;
     }
+
     footer {
       text-align: center;
-      padding: 40px 20px;
-      color: #777;
+      padding: 3rem 1rem;
+      background-color: #000;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    a {
+      color: #ff4da6;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo">LOTUS OFM</div>
-    <nav class="nav">
+    <h1>LOTUS OFM</h1>
+    <nav>
+      <a href="#about">About</a>
       <a href="#beliefs">Beliefs</a>
       <a href="#success">Success</a>
       <a href="#apply">Apply</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
     <div>
-      <h1>Elite OnlyFans Management for High-Earning Creators</h1>
-      <p>We turn your potential into consistent five-figure months.</p>
-      <button class="btn" onclick="document.getElementById('apply').scrollIntoView({ behavior: 'smooth' })">Apply Now</button>
+      <h2>Elite OnlyFans Management for High-Earning Creators</h2>
+      <a href="#apply"><button class="cta-btn">Apply Now</button></a>
     </div>
   </section>
 
-  <section id="beliefs" class="beliefs">
+  <section id="about">
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-text">
+      LOTUS OFM is a full-service management agency dedicated to helping creators scale their OnlyFans to new heights. From marketing to 24/7 messaging—we handle it all so you can focus on content.
+    </p>
+  </section>
+
+  <section id="beliefs">
     <h2 class="section-title">Our Beliefs</h2>
-    <p>At LOTUS OFM, we believe in transparency, creativity, and growth. We partner with creators to unlock their full earning potential without ever compromising their voice, image, or boundaries. Our 24/7 team is dedicated to ensuring every fan interaction and marketing decision is tailored for maximum success.</p>
+    <p class="section-text">
+      We believe in transparency, creative freedom, and long-term success. Whether you're starting from scratch or already earning, our systems are designed to multiply your results.
+    </p>
   </section>
 
-  <section id="success" class="success">
-    <h2 class="section-title">Success Stories</h2>
-    <div class="grid">
-      <p>🚀 Model A went from $1.2k/month to $18k/month in 90 days.</p>
-      <p>🔥 Model B scaled from $800/month to $11k/month with chat rev alone.</p>
-      <p>🌸 Over 10+ creators are now making $15k–$30k/month.</p>
+  <section id="success">
+    <h2 class="section-title">Client Success</h2>
+    <p class="section-text">
+      Our clients often go from earning $1k/month to $10k–$20k/month with our systems. Real growth, real results.
+    </p>
+    <div class="image-gallery">
+      <img src="https://via.placeholder.com/400x600" alt="Model 1">
+      <img src="https://via.placeholder.com/400x600" alt="Model 2">
+      <img src="https://via.placeholder.com/400x600" alt="Model 3">
+      <img src="https://via.placeholder.com/400x600" alt="Model 4">
     </div>
   </section>
 
-  <section id="apply" class="apply">
-    <h2 class="section-title">Apply to Join</h2>
-    <p>We’re looking for models with strong content, a social media presence (200k+ IG followers preferred), and the ambition to scale. No experience? No problem—we grow talent from $0 to 5-figures/month with zero upfront cost.</p>
-    <br />
-    <a href="#" class="btn">Apply Now</a>
+  <section id="apply">
+    <h2 class="section-title">Apply to Work With Us</h2>
+    <p class="section-text">
+      We’re selective about who we work with. If you have strong potential or an existing fanbase, apply now and we'll schedule a call to see if it’s the right fit.
+    </p>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://yourformlink.com" target="_blank"><button class="cta-btn">Apply Now</button></a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-text">
+      Have questions? Reach out to us at <a href="mailto:contact@lotusofm.com">contact@lotusofm.com</a> or DM on Instagram <a href="https://instagram.com/jay._.mauri">@jay._.mauri</a>
+    </p>
   </section>
 
   <footer>
-    &copy; 2025 LOTUS OFM. All rights reserved.
+    &copy; 2025 LOTUS OFM. All Rights Reserved.
   </footer>
+
 </body>
 </html>
