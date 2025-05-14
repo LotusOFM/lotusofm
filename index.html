@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOTUS OFM | Elite OnlyFans Management</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOTUS OFM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,210 +13,106 @@
     }
 
     body {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #0f0f0f;
-      color: #ffffff;
-      scroll-behavior: smooth;
+      color: #fff;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 1000;
+      padding: 1.5rem 2rem;
+      background-color: #0f0f0f;
     }
 
     .logo {
-      font-weight: 700;
       font-size: 1.5rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
       color: #fff;
     }
 
     nav a {
-      margin-left: 30px;
       color: #ccc;
+      margin-left: 2rem;
       text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: #ff69b4;
+    .cta-button {
+      background-color: #b30000;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #cc0000;
     }
 
     .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1607301721881-494a7f5d6da9?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       height: 100vh;
-      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center/cover no-repeat;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
+      padding: 0 3rem;
     }
 
-    .hero h1 {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
       font-size: 3rem;
-      max-width: 800px;
-      color: #fff;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #f5f5dc;
     }
 
-    .cta-button {
-      margin-top: 30px;
-      background-color: #ff69b4;
-      color: white;
-      padding: 15px 40px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    section {
-      padding: 100px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #ccc;
-      text-align: center;
-    }
-
-    .beliefs, .testimonials, .apply, .contact {
-      margin-top: 60px;
-    }
-
-    .testimonial {
-      background: #1a1a1a;
-      border-radius: 12px;
-      padding: 30px;
-      margin: 20px 0;
-      box-shadow: 0 0 10px rgba(255, 105, 180, 0.1);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    input, textarea {
-      padding: 15px;
-      border-radius: 10px;
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      color: #fff;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: #ff69b4;
-      border: none;
-      color: #fff;
-      font-weight: 600;
-      padding: 15px;
-      border-radius: 30px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 60px 20px;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      header {
-        padding: 15px 20px;
-      }
-      nav a {
-        margin-left: 15px;
-      }
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">LOTUS OFM</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#models">Models</a>
+      <a href="#apply">Apply</a>
+      <button class="cta-button">Join Us</button>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">LOTUS OFM</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#beliefs">Beliefs</a>
-    <a href="#testimonials">Success</a>
-    <a href="#apply">Apply</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div>
-    <h1>Elite OnlyFans Management for High-Earning Creators</h1>
-    <a href="#apply" class="cta-button">Apply Now</a>
-  </div>
-</section>
-
-<section id="about">
-  <h2>About LOTUS OFM</h2>
-  <p>We specialize in scaling OnlyFans creators through expert marketing, fan engagement, and monetization strategies. Whether you're just starting or making $20K+/month, we help take your brand to the next level.</p>
-</section>
-
-<section id="beliefs" class="beliefs">
-  <h2>Our Beliefs</h2>
-  <p>We believe in authenticity, transparency, and helping creators thrive without creative compromise. Our team is behind the scenes making sure your business runs 24/7.</p>
-</section>
-
-<section id="testimonials" class="testimonials">
-  <h2>Success Stories</h2>
-  <div class="testimonial">
-    <p>"I went from $2K to $15K/month in just 60 days. The support and strategy Lotus OFM gave me is unmatched."</p>
-    <p><strong>- Mia</strong></p>
-  </div>
-  <div class="testimonial">
-    <p>"Everything changed the moment I joined. I never thought my account could reach this level so fast."</p>
-    <p><strong>- Rayx</strong></p>
-  </div>
-</section>
-
-<section id="apply" class="apply">
-  <h2>Apply to Join</h2>
-  <form action="https://formspree.io/f/mnndokgq" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <input type="text" name="platform" placeholder="Main Platform (e.g. Instagram)">
-    <textarea name="message" placeholder="Tell us about yourself..."></textarea>
-    <button type="submit">Submit Application</button>
-  </form>
-</section>
-
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: lotusofm@gmail.com</p>
-  <p>Instagram: @jay._.mauri</p>
-</section>
-
-<footer>
-  &copy; 2025 LOTUS OFM. All rights reserved.
-</footer>
-
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>YOUR SUCCESS IS OUR MISSION</h1>
+      <p>We help elite creators build powerful, high-income brands on OnlyFans. Start today.</p>
+      <button class="cta-button">Apply Now</button>
+    </div>
+  </section>
 </body>
 </html>
