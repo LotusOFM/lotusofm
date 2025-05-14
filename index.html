@@ -14,8 +14,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #333;
+      background-color: #111;
+      color: #f1f1f1;
       scroll-behavior: smooth;
       line-height: 1.6;
     }
@@ -23,19 +23,19 @@
     header {
       position: sticky;
       top: 0;
-      background-color: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #1a1a1a;
       padding: 20px 40px;
       z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #333;
     }
 
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #333;
+      color: #ccc;
       font-weight: 600;
     }
 
@@ -45,7 +45,7 @@
 
     .hero {
       position: relative;
-      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center/cover no-repeat;
+      background: url('https://i.postimg.cc/VvgYp9GK/background-banner.png') center center/cover no-repeat;
       height: 100vh;
       color: white;
       text-align: center;
@@ -83,6 +83,7 @@
 
     .cta-button:hover {
       transform: scale(1.05);
+      background-color: #ff85c1;
     }
 
     section {
@@ -96,6 +97,12 @@
       margin-bottom: 20px;
       text-align: center;
       font-weight: 800;
+      color: #fff;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 20px;
     }
 
     .testimonial-slider {
@@ -106,10 +113,10 @@
 
     .testimonial {
       min-width: 300px;
-      background-color: #f8f8f8;
+      background-color: #1e1e1e;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
     .testimonial img {
@@ -127,8 +134,15 @@
     input, textarea, button {
       padding: 12px;
       font-size: 1em;
-      border: 1px solid #ccc;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
       border-radius: 4px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #aaa;
     }
 
     button {
@@ -144,7 +158,7 @@
     }
 
     #beliefs {
-      background: linear-gradient(135deg, #ffe4ec, #fff);
+      background: #1a1a1a;
       border-radius: 12px;
       text-align: center;
       padding: 60px 20px;
@@ -157,7 +171,8 @@
     footer {
       text-align: center;
       padding: 30px;
-      color: #aaa;
+      color: #666;
+      background-color: #111;
     }
   </style>
 </head>
@@ -208,18 +223,10 @@
   <section id="apply">
     <h2>Apply to Join LOTUS OFM</h2>
     <form action="https://formspree.io/f/mnndokgq" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="_replyto" required>
-
-      <label for="platform">Content Platform:</label>
-      <input type="text" id="platform" name="platform">
-
-      <label for="message">Tell us about yourself:</label>
-      <textarea id="message" name="message"></textarea>
-
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="_replyto" placeholder="Email" required>
+      <input type="text" name="platform" placeholder="Content Platform (e.g., OnlyFans)">
+      <textarea name="message" rows="5" placeholder="Tell us about yourself..."></textarea>
       <button type="submit">Submit Application</button>
     </form>
   </section>
